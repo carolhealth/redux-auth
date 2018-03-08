@@ -49,7 +49,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.fetch = exports.hideDestroyAccountErrorModal = exports.hideDestroyAccountSuccessModal = exports.hideUpdatePasswordErrorModal = exports.hideUpdatePasswordSuccessModal = exports.hidePasswordResetRequestErrorModal = exports.hidePasswordResetRequestSuccessModal = exports.hidePasswordResetErrorModal = exports.hideFirstTimeLoginErrorModal = exports.showPasswordResetErrorModal = exports.showFirstTimeLoginErrorModal = exports.hidePasswordResetSuccessModal = exports.hideFirstTimeLoginSuccessModal = exports.showPasswordResetSuccessModal = exports.showFirstTimeLoginSuccessModal = exports.hideEmailSignUpErrorModal = exports.hideEmailSignUpSuccessModal = exports.hideSignOutErrorModal = exports.hideSignOutSuccessModal = exports.hideOAuthSignInErrorModal = exports.hideOAuthSignInSuccessModal = exports.hideEmailSignInErrorModal = exports.hideEmailSignInSuccessModal = exports.getApiUrl = exports.verifyAuth = exports.destroyAccount = exports.updatePasswordModalFormUpdate = exports.updatePasswordModal = exports.updatePasswordFormUpdate = exports.updatePassword = exports.requestPasswordResetFormUpdate = exports.requestPasswordReset = exports.oAuthSignIn = exports.emailSignUpFormUpdate = exports.emailSignUp = exports.signOut = exports.emailSignInFormUpdate = exports.emailSignIn = exports.authenticate = exports.configure = exports.authStateReducer = undefined;
+	exports.fetch = exports.hideDestroyAccountErrorModal = exports.hideDestroyAccountSuccessModal = exports.hideUpdatePasswordErrorModal = exports.hideUpdatePasswordSuccessModal = exports.hidePasswordResetRequestErrorModal = exports.hidePasswordResetRequestSuccessModal = exports.hidePasswordResetErrorModal = exports.hideFirstTimeLoginErrorModal = exports.showPasswordResetErrorModal = exports.showFirstTimeLoginErrorModal = exports.hidePasswordResetSuccessModal = exports.hideFirstTimeLoginSuccessModal = exports.showPasswordResetSuccessModal = exports.showFirstTimeLoginSuccessModal = exports.hideEmailSignUpErrorModal = exports.hideEmailSignUpSuccessModal = exports.hideSignOutErrorModal = exports.hideSignOutSuccessModal = exports.hideOAuthSignInErrorModal = exports.hideOAuthSignInSuccessModal = exports.hideEmailSignInErrorModal = exports.hideEmailSignInSuccessModal = exports.getApiUrl = exports.verifyAuth = exports.destroyAccount = exports.updatePasswordModalFormUpdate = exports.updatePasswordModal = exports.updatePasswordFormUpdate = exports.updatePassword = exports.requestPasswordResetFormUpdate = exports.requestPasswordReset = exports.oAuthSignIn = exports.emailSignUpComplete = exports.emailSignUpFormUpdate = exports.emailSignUp = exports.signOut = exports.emailSignInFormUpdate = exports.emailSignIn = exports.authenticate = exports.configure = exports.authStateReducer = undefined;
 
 	var _configure = __webpack_require__(73);
 
@@ -105,6 +105,12 @@
 	  enumerable: true,
 	  get: function get() {
 	    return _emailSignUp.emailSignUpFormUpdate;
+	  }
+	});
+	Object.defineProperty(exports, "emailSignUpComplete", {
+	  enumerable: true,
+	  get: function get() {
+	    return _emailSignUp.emailSignUpComplete;
 	  }
 	});
 
@@ -1102,8 +1108,6 @@
 	}
 
 	function updateAuthCredentials(resp) {
-	  var currentHeaders = (0, _sessionStorage.retrieveData)(C.SAVED_CREDS_KEY);
-
 	  // set header for each key in `tokenFormat` config
 	  var newHeaders = {};
 
