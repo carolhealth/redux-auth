@@ -24,7 +24,7 @@ const handleFormErrors = err => {
     throw new SubmissionError({ _error: errorStr });
   } else {
     throw new SubmissionError({
-      _error: "Something went wrong. Please try again"
+      _error: "Invalid email/password combination"
     });
   }
 };
