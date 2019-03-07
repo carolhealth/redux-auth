@@ -37,9 +37,10 @@ class EmailSignInForm extends React.Component {
   };
 
   renderFormError(error) {
+    console.log(error)
     return (
       <Grid.Column key="errors" width={16}>
-        <FormError error={error} />
+        <FormError error={"Invalid email/password combination"} />
       </Grid.Column>
     );
   }

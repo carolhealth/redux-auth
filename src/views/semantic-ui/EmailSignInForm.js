@@ -19,17 +19,12 @@ function mapStateToProps({ auth }, ownProps) {
 
 const handleFormErrors = err => {
   if (err && err.errors) {
-    console.log('inside if')
     const errorStr =
       typeof err.errors === "Array" ? err.errors.join(" ") : err.errors;
-      console.log(errorStr)
-
     throw new SubmissionError({ _error: errorStr });
   } else {
-    console.log('in else')
-
     throw new SubmissionError({
-      _error: "Invalid email/password combination"
+      _error: "Something went wrong. Please try again"
     });
   }
 };
