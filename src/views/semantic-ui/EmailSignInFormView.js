@@ -67,7 +67,7 @@ class EmailSignInForm extends React.Component {
         <Container>
           <Segment basic>
             <Grid padded className="input-fields">
-              {error && dirty && this.renderFormError(error)}
+              {/* {error && dirty && this.renderFormError(error)}
               <Grid.Column key="email" width={16}>
                 <Field
                   component={Input}
@@ -77,7 +77,7 @@ class EmailSignInForm extends React.Component {
                   type="email"
                   {...inputProps.email}
                 />
-              </Grid.Column>
+              </Grid.Column> */}
               <Grid.Column key="password" width={16}>
                 <Field
                   component={Input}
